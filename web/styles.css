@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+h2{
+  color: #5B2A8C;
+}
+
+.nav-icon{
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.bg-cor-primaria{
+  background-color: #5B2A8C;
+  color: white;
+}

@@ -1,0 +1,15 @@
+a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.imagem-livro-tabela{
+    width: 100px;
+    height: 100px;
+}
+
+.lixo{
+    font-size: 2rem;
+    margin-top: 2rem;
+}

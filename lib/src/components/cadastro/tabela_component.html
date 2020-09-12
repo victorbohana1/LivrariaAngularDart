@@ -1,0 +1,61 @@
+<div class="container">
+    <h2 class="mt-3">Cadastro de Livros</h2>
+    <div class="hr-loja mb-4"></div>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputTitulo">Titulo do livro</label>
+                <input #titulo type="text" class="form-control" id="inputTitulo" placeholder="Titulo do livro">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAutor">Nome do autor</label>
+                <input #autor type="text" class="form-control" id="inputAutor" placeholder="Autor do livro">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputImagem">Imagem da Capa</label>
+                <input #url type="text" class="form-control" id="inputImagem" placeholder="Capa do livro">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputAval">Avaliação</label>
+                <input #aval type="number" max="5" class="form-control" id="inputAval" placeholder="Avaliação">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputEstoque">Estoque</label>
+                <input #estoque type="number" class="form-control" id="inputEstoque" placeholder="Estoque">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputPreco">Preço</label>
+                <input #preco type="text" class="form-control" id="inputPreco" placeholder="Preço">
+            </div>
+            <button class="btn bg-cor-primaria" 
+                (click)="adicionarLivro(titulo.value, autor.value, url.value, 
+                            preco.value, aval.value, estoque.value)">
+            CADASTRAR</button>
+        </div>
+    </form>
+
+
+    <div class="table-responsive-md">
+        <table class="table mt-4" style="width: 100%;">
+            <tr>
+                <th class="bg-cor-primaria">Titulo</th>
+                <th class="bg-cor-primaria">Autor</th>
+                <th class="bg-cor-primaria">Avaliação</th>
+                <th class="bg-cor-primaria">Estoque</th>
+                <th class="bg-cor-primaria">Preço</th>
+                <th class="bg-cor-primaria">Imagem</th>
+            </tr>
+            <tr *ngFor="let livro of livros; let $i = index">
+                <td>{{livro.titulo}}</td>
+                <td>{{livro.autor}}</td>
+                <td>{{livro.avaliacao}} / 5 <i class="fa fa-star estrela-amarela"></i></td>
+                <td>{{livro.estoque}}</td>
+                <td>{{livro.preco}}</td>
+                <td><img class="imagem-livro-tabela" src="{{livro.imagemURL}}" alt=""></td>
+                <td><a (click)="removerLivro($i)"><i class="fa fa-trash-o lixo" aria-hidden="true"></i></a></td>
+            </tr>
+        </table>
+    </div>
+</div>

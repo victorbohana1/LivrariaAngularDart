@@ -1,0 +1,40 @@
+p{
+    margin: 0;
+}
+
+.estrela-amarela{
+    color:gold;
+}
+
+.livro{
+    border: 3px solid lightgray;
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.livro-pequeno{
+    font-style: italic;
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.imagem-livro{
+    height: 150px;
+    widows: 150px;
+}
+
+.bg-cor-primaria{
+    background-color: #5B2A8C;
+    color: white;
+}
+
+.hr-loja{
+    width: 140px;
+    border: 5px solid #5B2A8C;
+}
+
+@media (max-width: 576px){
+    .livro{
+        width: 100%;
+    }
+}
