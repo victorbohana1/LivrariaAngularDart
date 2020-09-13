@@ -33,7 +33,7 @@ p{
     border: 5px solid #5B2A8C;
 }
 
-@media (max-width: 576px){
+@media (max-width: 768px){
     .livro{
         width: 100%;
     }
