@@ -47,14 +47,14 @@
                 <th class="bg-cor-primaria">Preço</th>
                 <th class="bg-cor-primaria">Imagem</th>
             </tr>
-            <tr *ngFor="let livro of livros; let $i = index">
+            <tr *ngFor="let livro of livros; let i = index">
                 <td>{{livro.titulo}}</td>
                 <td>{{livro.autor}}</td>
                 <td>{{livro.avaliacao}} / 5 <i class="fa fa-star estrela-amarela"></i></td>
                 <td>{{livro.estoque}}</td>
                 <td>{{livro.preco}}</td>
                 <td><img class="imagem-livro-tabela" src="{{livro.imagemURL}}" alt=""></td>
-                <td><a (click)="removerLivro($i)"><i class="fa fa-trash-o lixo" aria-hidden="true"></i></a></td>
+                <td><a (click)="removerLivro(i)"><i class="fa fa-trash-o lixo" aria-hidden="true"></i></a></td>
             </tr>
         </table>
     </div>
